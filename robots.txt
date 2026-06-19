@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lord54porter7.github.io/cn-fishingslots-com-2/sitemap.xml

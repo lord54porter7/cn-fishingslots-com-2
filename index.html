@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捕鱼游戏 · 信息参考与拓展阅读</title>
+    <style>
+        /* 极简留白 · 窄正文宽度 · 清晰层级 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafb;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #1e2a3a;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.4rem 1.2rem 3.2rem;
+        }
+
+        .page-wrapper {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* 文章标题 */
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.15rem;
+            line-height: 1.2;
+            color: #0f1a2b;
+            border-bottom: 2px solid #dce3ec;
+            padding-bottom: 0.6rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #5b6f85;
+            margin-top: 0.3rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            font-style: italic;
+            border-left: 3px solid #b7c6d9;
+            padding-left: 1rem;
+        }
+
+        /* 导语 */
+        .intro {
+            font-size: 1.08rem;
+            background: #f1f4f8;
+            padding: 1.6rem 1.8rem;
+            border-radius: 20px;
+            margin: 1.6rem 0 2.2rem;
+            color: #1d2b3a;
+            line-height: 1.7;
+        }
+
+        .intro strong {
+            font-weight: 600;
+            color: #0e1f32;
+        }
+
+        /* 正文段落 */
+        .body-text {
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .body-text small {
+            font-size: 0.9rem;
+            color: #5b6f85;
+        }
+
+        /* 引用块 / 提示 */
+        .reference-block {
+            background: #eef3f9;
+            border-left: 5px solid #7e95b0;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 2.2rem;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.96rem;
+            color: #1f3143;
+        }
+
+        .reference-block p {
+            margin-bottom: 0.4rem;
+        }
+
+        .reference-block .source {
+            font-size: 0.85rem;
+            color: #4a607a;
+            margin-top: 0.5rem;
+        }
+
+        /* 二级标题（章节） */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.4rem;
+            margin-bottom: 0.8rem;
+            color: #152433;
+            border-bottom: 1px dashed #c3d0de;
+            padding-bottom: 0.25rem;
+        }
+
+        .section-title.alt {
+            margin-top: 2.8rem;
+        }
+
+        /* 列表（简洁无装饰） */
+        .plain-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0 1.8rem;
+        }
+
+        .plain-list li {
+            padding: 0.5rem 0 0.5rem 1.4rem;
+            position: relative;
+            border-bottom: 1px solid #e3e9f1;
+            font-size: 0.98rem;
+        }
+
+        .plain-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #6d86a2;
+            font-weight: bold;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin: 1.6rem 0;
+            padding: 0.8rem 1rem;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eaeef5;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #152f47;
+            font-size: 1.03rem;
+        }
+
+        .faq-item .a {
+            color: #2d4057;
+            margin-top: 0.4rem;
+            padding-left: 0.15rem;
+        }
+
+        /* 访问句 / 引用链接 */
+        .visit-sentence {
+            margin: 2.5rem 0 1.2rem;
+            padding: 1.2rem 0 0.2rem;
+            border-top: 1px solid #d8e1ec;
+            font-size: 1rem;
+            color: #1a2d42;
+        }
+
+        .visit-sentence a {
+            color: #1f4a7a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #91aac9;
+            font-weight: 500;
+        }
+
+        .visit-sentence a:hover {
+            color: #0c2c4c;
+            text-decoration-color: #0c2c4c;
+        }
+
+        .fine-note {
+            font-size: 0.88rem;
+            color: #62778f;
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #dce3ec;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1.6rem 1rem 2.4rem;
+            }
+            .article-title {
+                font-size: 1.7rem;
+            }
+            .intro {
+                padding: 1.2rem 1.4rem;
+            }
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 文章标题 -->
+    <h1 class="article-title">捕鱼游戏：从查询、对照到延伸阅读</h1>
+    <div class="subhead">一份整理自日常观察与参考信息的说明页</div>
+
+    <!-- 导语 -->
+    <div class="intro">
+        <strong>关于本篇</strong> —— 为了方便日常查阅与对照，这里将围绕「捕鱼游戏」这一主题梳理常见概念、场景分类、
+        以及一些值得留意的细节。内容力求平实、可参考，适合作为快速了解的起点或延伸阅读的索引。
+    </div>
+
+    <!-- 正文段落1 -->
+    <p class="body-text">
+        在多数休闲游戏列表中，<strong>捕鱼游戏</strong>一直是一个相对独立的类型。
+        它的核心机制通常围绕瞄准、射击与反馈循环展开，但不同产品在节奏设计、奖励结构以及视觉风格上差异明显。
+        从早期的街机厅到如今的移动端，这一分支始终保有一批稳定的关注者。
+        如果你希望系统性地了解这个品类，先找到一份综合性的信息入口会很有帮助。
+    </p>
+
+    <!-- 正文段落2 + 关键词自然链接 -->
+    <p class="body-text">
+        在实际查询过程中，很多玩家会先搜索“捕鱼游戏 玩法介绍”或“捕鱼游戏 版本对照”，
+        然后逐步深入到具体的界面、数值或者主题变化。
+        作为参考站点之一，<a href="https://cn-fishingslots.com">捕鱼游戏</a>提供了多种版本的基本信息与分类索引，
+        适合在初步了解后进一步对照不同产品的异同。页面结构偏向目录式，方便按需浏览。
+    </p>
+
+    <!-- 引用提示块 -->
+    <div class="reference-block">
+        <p>💡 查阅提示</p>
+        <p>当你在不同页面看到同一款捕鱼游戏的截图或描述时，建议留意版本号与发行年份。
+        部分经典主题会反复迭代，画面和结算逻辑可能已有变化。
+        另外，留意游戏内的帮助说明与赔率表，能够帮助你更准确地理解规则。</p>
+        <p class="source">—— 摘自日常查询笔记，2025 · 整理</p>
+    </div>
+
+    <!-- 章节：常见特点 -->
+    <h2 class="section-title">常见特点 · 对照视角</h2>
+    <ul class="plain-list">
+        <li><strong>场景与鱼群层级</strong> —— 多数产品会设计多种鱼类与对应分值，部分包含特殊鱼种或 Boss 机制。</li>
+        <li><strong>炮台与子弹系统</strong> —— 火力等级、子弹消耗与命中反馈是核心交互；不同版本在“锁定”与“手动瞄准”上各有侧重。</li>
+        <li><strong>奖励与周期事件</strong> —— 免费射击、限时鱼潮、排行榜挑战等模式常被用来增加变化。</li>
+        <li><strong>视觉风格</strong> —— 从写实海底到卡通风格均有覆盖，部分版本会结合节日或 IP 主题。</li>
+    </ul>
+
+    <!-- 章节：场景与延伸阅读 -->
+    <h2 class="section-title alt">延伸场景 · 从了解到对照</h2>
+    <p class="body-text">
+        如果你正在进行两款以上捕鱼游戏的对比，建议先列出各自的基础规则、炮台等级上限以及特殊事件触发条件。
+        很多细微差异在实际体验中才会显现，比如子弹飞行速度、鱼类游动路径的随机性。
+        另外，部分网站会提供简明对照表，帮助你快速定位差异点——例如在浏览 
+        <a href="https://cn-fishingslots.com">捕鱼游戏</a> 的列表页时，
+        可以留意每款游戏标注的关键词与分类标签，它们往往是横向比较的起点。
+    </p>
+
+    <!-- FAQ 摘要（简洁版） -->
+    <h2 class="section-title alt">FAQ 摘要 · 常见疑问</h2>
+
+    <div class="faq-item">
+        <div class="q">Q：捕鱼游戏是否有统一的规则标准？</div>
+        <div class="a">A：没有统一标准。不同产品、不同版本在命中判定、倍率计算、特殊鱼种等方面均有差异。
+        建议以具体游戏内的帮助说明或官方介绍为准。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="q">Q：如何快速了解一款捕鱼游戏的基本信息？</div>
+        <div class="a">A：可以关注游戏的版本号、炮台等级范围、鱼类分值表以及是否有额外模式（如 Boss 战、限时挑战）。
+        部分站点会整理这些信息，例如从 <a href="https://cn-fishingslots.com">捕鱼游戏</a> 的分类索引中可找到多款产品的摘要。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="q">Q：同一主题的捕鱼游戏在不同平台有区别吗？</div>
+        <div class="a">A：可能。界面布局、操作方式甚至部分数值会因平台适配而调整。
+        建议以目标平台的实际情况为准。</div>
+    </div>
+
+    <!-- 访问句（自然嵌入链接） -->
+    <div class="visit-sentence">
+        若你在日常查询中希望有一个可对照的参考页面，可以打开 
+        <a href="https://cn-fishingslots.com">捕鱼游戏</a> 
+        的信息索引，那里以条目形式列出了多个版本的基本特征与分类。
+        适合在需要横向比较时快速浏览。
+    </div>
+
+    <!-- 尾注 -->
+    <div class="fine-note">
+        本页内容仅供信息参考与延伸阅读，不构成任何操作建议。各游戏版本以实际页面描述为准。
+        <br>· 整理时间：2025 · 内容方向：日常查询与对照 ·
+    </div>
+
+</div>
+</body>
+</html>
